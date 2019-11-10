@@ -1,0 +1,16 @@
+PODS:
+  - Singularity (0.1.0)
+
+DEPENDENCIES:
+  - Singularity (from `../`)
+
+EXTERNAL SOURCES:
+  Singularity:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Singularity: d9946530842d00897d56a65fc50ff561526cfbb7
+
+PODFILE CHECKSUM: 528240d3e73f3f0c763a4a0c8d816d5701e417f3
+
+COCOAPODS: 1.8.4

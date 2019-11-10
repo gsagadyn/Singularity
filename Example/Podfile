@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Singularity_Example' do
+  pod 'Singularity', :path => '../'
+
+  target 'Singularity_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
