@@ -1,0 +1,16 @@
+name: SingularityExample
+options:
+  bundleIdPrefix: pl.codeforge
+attributes:
+  ORGANIZATIONNAME: "SingularityExample"
+packages:
+  Singularity:
+    path: ..
+targets:
+  SingularityExample:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources: [SingularityExample]
+    dependencies:
+      - package: Singularity
