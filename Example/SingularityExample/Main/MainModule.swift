@@ -10,7 +10,7 @@ import Foundation
 import Singularity
 
 internal class MainModule: ModuleType {
-    internal func load(to resolver: Resolver) {
-        resolver.register(type: HomeService.self, dependencyType: .weak) { HomeService() }
+    internal func load(to resolver: ResolverType) {
+        resolver.register(type: HomeService.self) { HomeService() }
     }
 }

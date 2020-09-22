@@ -27,7 +27,7 @@ public struct InjectLazy<Component> {
     public var wrappedValue: Component {
         mutating get {
             if let component = component { return component }
-            let component = resolver[Component.self, name]
+            let component = try! resolver.resolve(type: Component.self, name: name)
             self.component = component
             return component
         }

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Singularity'
-  s.version          = '1.0.0'
-  s.summary          = 'WIP: Singularity Architecture.'
+  s.version          = '1.0.1'
+  s.summary          = 'Singularity is a lightweight Dependency Injection (DI) framework.'
   s.homepage         = 'https://github.com/gsagadyn/Singularity'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Grzegorz Sagadyn' => 'sagadyn@gmail.com' }

@@ -12,5 +12,5 @@ public protocol ModuleType: class {
     ///
     /// - parameters:
     ///   - dependencyStore: Instance of dependency store.
-    func load(to resolver: Resolver)
+    func load(to resolver: ResolverType)
 }

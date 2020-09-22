@@ -16,7 +16,7 @@ public struct Inject<Component> {
     // MARK: - Initialization
     
     public init(_ resolver: Resolver, name: String? = nil) {
-        self.component = resolver[Component.self, name]
+        self.component = try! resolver.resolve(type: Component.self, name: name)
     }
 
     // MARK: - Wrapped Value

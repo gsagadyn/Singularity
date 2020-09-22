@@ -27,13 +27,18 @@ internal class Descriptor {
 // ----------------------------------------------------------------------------------------------------------------
 
 extension Descriptor {
-    internal func resolve<T>() -> T {
+    internal func resolve<T>() throws -> T {
         let instanceTmp = instance ?? producer()
         instance = (type == .strong ? instanceTmp : nil)
-        return instanceTmp as! T
+        
+        guard let result = instanceTmp as? T else {
+            throw SingularityError.typeInconsistency
+        }
+        
+        return result
     }
 
-    internal func reestablish() {
+    internal func reset() {
         instance = nil
     }
 }

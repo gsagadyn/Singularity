@@ -15,16 +15,15 @@ internal class Storage {
 
     // MARK: - Subscript
 
-    internal subscript<T>(type: T.Type, name: String?) -> Descriptor {
+    internal subscript<T>(type: T.Type, name: String?) -> Descriptor? {
         get {
             var item: Descriptor?
             let itemId = identifier(for: type, withName: name)
             dispatchQueue.sync { item = descriptors[itemId] }
-            guard let unwrapped = item else { fatalError("Dependency with id \"\(itemId)\" not exists") }
-            return unwrapped
+            return item
         }
         set {
-            let item: Descriptor = newValue
+            let item: Descriptor? = newValue
             let itemId = identifier(for: type, withName: name)
             dispatchQueue.sync { descriptors[itemId] = item }
         }

@@ -1,6 +1,6 @@
 //
 //  InjectWeak.swift
-//
+//  SingularityExample
 //
 //  Created by Grzegorz Sagadyn on 22/09/2020.
 //
@@ -23,5 +23,5 @@ public struct InjectWeak<Component> {
 
     // MARK: - Wrapped Value
 
-    public var wrappedValue: Component { resolver[Component.self, name] }
+    public var wrappedValue: Component { try! resolver.resolve(type: Component.self, name: name) }
 }
