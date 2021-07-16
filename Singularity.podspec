@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Singularity'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Singularity is a lightweight Dependency Injection (DI) framework.'
   s.homepage         = 'https://github.com/gsagadyn/Singularity'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
