@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ModuleType: class {
+public protocol ModuleType: AnyObject {
     /// Adds module's dependencies to dependency store
     ///
     /// - parameters:
